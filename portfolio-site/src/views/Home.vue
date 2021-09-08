@@ -1,25 +1,33 @@
 <template>
   <div class="home">
-    <ul>
-      <li v-for="link in links" :key="link">
-        <img :src="link" alt="">
-      </li>
-    </ul>
-    <!-- <img alt="Vue logo" src="https://i.ibb.co/cYwW3xW/kavaopaque.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <ul>
+        <li>
+          <img src="@/assets/image0.png" alt="">
+        </li>
+        <li>
+          <img src="@/assets/image1.png" alt="">
+        </li>
+        <li>
+          <img src="@/assets/image2.png" alt="">
+        </li>
+        <li>
+          <img src="@/assets/image3.png" alt="">
+        </li>
+        <li>
+          <img src="@/assets/image4.png" alt="">
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import imageLinks from '@/assets/imageLinks.js'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  },
   data(){
     return{
       links: null,
