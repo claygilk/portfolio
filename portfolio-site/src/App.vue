@@ -27,8 +27,6 @@
 
     <router-view id="view"/>
 
-    <!-- <div class="spacer"></div> -->
-
     <Footer id="footer"/>
 
   </div>
@@ -49,24 +47,31 @@ export default {
 
 // large screens
 @media only screen and (min-width: 720px) {
- #app{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
- }
+//  #app{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//  }
 
  #nav {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
    display: flex;
    flex-direction: column !important;
    align-items: center;
    justify-content: space-between !important;
    padding: $base-padding;
    box-shadow: 3px 0px 3px grey !important;
-   min-height: 100%;
 
   a {
     margin-bottom: $base-margin;
   }
+ }
+
+ #view{
+   margin-left: 250px;
  }
 
  div.nav-links{
@@ -77,6 +82,10 @@ export default {
  div.social-links{
    display: block !important;
  }
+
+ div.spacer{
+  display: block;
+}
 }
 
 // small screens
@@ -112,6 +121,10 @@ div.nav-links{
 }
 
 div.social-links{
+  display: none;
+}
+
+div.spacer{
   display: none;
 }
 
