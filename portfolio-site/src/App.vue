@@ -27,10 +27,22 @@
 
     <router-view id="view"/>
 
-    <div class="spacer"></div>
+    <!-- <div class="spacer"></div> -->
+
+    <Footer id="footer"/>
 
   </div>
 </template>
+
+<script>
+import Footer from './components/Footer.vue'
+
+export default {
+  components: {
+    Footer
+  }
+}
+</script>
 
 <style lang="scss">
 @import './styles/index.scss';
@@ -101,6 +113,16 @@ div.nav-links{
 
 div.social-links{
   display: none;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $darkpurple;
+  color: white;
+  
 }
 
 </style>
