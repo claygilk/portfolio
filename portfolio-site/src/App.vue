@@ -5,9 +5,11 @@
       <router-link to="/about">About</router-link>
       <router-link to="/commission">Commissions</router-link>
     </div>
-    <div id="view-holder">
-      <router-view id="view" class="p-3"/>
-    </div>
+
+    <router-view id="view"/>
+
+    <div class="spacer"></div>
+
   </div>
 </template>
 
@@ -51,7 +53,6 @@
   color: $darkpurple;
   background-color: $primary;
   box-shadow: 0px 2px 3px grey;
-
 
   a{
     color: whitesmoke;
