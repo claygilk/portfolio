@@ -1,23 +1,14 @@
 <template>
   <div class="home">
     <div>
+
       <ul class="flex-row just-center">
-        <li>
-          <img src="@/assets/image0.png" alt="">
-        </li>
-        <li>
-          <img src="@/assets/image1.png" alt="">
-        </li>
-        <li>
-          <img src="@/assets/image4.png" alt="">
-        </li>
-        <li>
-          <img src="@/assets/image2.png" alt="">
-        </li>
-        <li>
-          <img src="@/assets/image3.png" alt="">
+        <li id="test" :key="key" v-for="(img, key) in images">
+       <img :src="img" class="" >
+          
         </li>
       </ul>
+
     </div>
   </div>
 </template>
@@ -26,6 +17,22 @@
 
 export default {
   name: 'Home',
+  data(){
+    return {
+      imageDir: '../assets',
+      images: {}
+    }
+  },
+  methods: {
+    importAll(r) {
+      var imgs = {}
+      r.keys().forEach(key => (imgs[key] = r(key)))
+      this.images = imgs
+    }
+  },
+  mounted() {
+    this.importAll(require.context('../assets', true, /\.png$/))
+  },
 }
 </script>
 

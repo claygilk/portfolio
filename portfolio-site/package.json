@@ -11,7 +11,6 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.8",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
@@ -22,6 +21,7 @@
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.39.0",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14"
   }
 }
