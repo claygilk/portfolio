@@ -5,7 +5,9 @@
       <router-link to="/about">About</router-link>
       <router-link to="/commission">Commissions</router-link>
     </div>
-    <router-view id="view" class="p-3"/>
+    <div id="view-holder">
+      <router-view id="view" class="p-3"/>
+    </div>
   </div>
 </template>
 
@@ -17,6 +19,7 @@
  #app{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
  }
 
  #nav {
@@ -39,6 +42,7 @@
 #app{
   background-color: $secondary;
   min-height: 100vh;
+  
 }
 #nav{
   display: flex;
@@ -55,11 +59,6 @@
   }
 }
 
-// #view{
-//   *{
-//     background-color: $primary;
-//   }
-//   background-color: $primary;
-// }
+
 
 </style>
